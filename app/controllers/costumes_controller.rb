@@ -1,14 +1,15 @@
 class CostumesController < ApplicationController
+  before_action :set_costume, only: %i[show]
   def index
     @costumes = Costume.all
   end
 
-  # def new
-  #   @costume = Costume.new
-  # end
+  def show
+  end
 
-  # def create
-  #   @costume = Costume.new
-  #   @costume
-  # end
+  private
+
+  def set_costume
+    @costume = Costume.find(params(:id))
+  end
 end
