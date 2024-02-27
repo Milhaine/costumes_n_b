@@ -10,6 +10,6 @@ class CostumesController < ApplicationController
   private
 
   def set_costume
-    @costume = Costume.find(params(:id))
+    @costume = Costume.find(params[:id])
   end
 end
