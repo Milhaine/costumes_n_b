@@ -2,6 +2,7 @@ class RentalsController < ApplicationController
   before_action :authenticate_user!
   def new
     @rental = Rental.new
+    @costume = Costume.find(params[:costume_id])
   end
 
   def create
