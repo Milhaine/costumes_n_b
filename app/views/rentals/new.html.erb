@@ -1,6 +1,6 @@
-<% simple_form_for [@costume, @user, @rental] do |f| %>
+<%=simple_form_for [@costume, @rental], url: costume_rentals_path do |f| %>
 
-  <%= f.input :date_debut, as: :date %>
-  <%= f.input :date_fin, as: :date %>
+  <%= f.input :start_date, as: :date %>
+  <%= f.input :end_date, as: :date %>
   <%= f.button :submit %>
 <% end %>

@@ -5,11 +5,16 @@ class RentalsController < ApplicationController
   end
 
   def create
-    @rental = Rental.create(rental_params)
+    @rental = Rental.new(rental_params)
     @costume = Costume.find(params[:costume_id])
     @user = current_user
     @rental.costume = @costume
     @rental.user = @user
+    if @rental.save
+      redirect_to costume_path(@costume)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
