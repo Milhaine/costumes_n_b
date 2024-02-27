@@ -1,6 +1,16 @@
 .navbar {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   background: rgb(99, 23, 23);
+  padding: 10px 20px;
+  height: 100px;
+}
+
+.navbar-logo {
+  max-width: 150px;
+  margin-right: 20px;
+  align-items: flex-start;
 }
 
 .navbar-lewagon .navbar-collapse {
