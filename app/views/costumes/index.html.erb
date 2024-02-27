@@ -13,8 +13,11 @@
   <nav class="navbar">
   <img alt="Logo" width="300" src="/assets/logo.png">
   </nav>
-<div class="card-container">
+<div class="container">
+  <div class="row">
+
     <% @costumes.each do |costume| %>
+    <div class="col-4">
 
     <div class="card" >
 
@@ -35,8 +38,10 @@
 
     </div>
 
+    </div>
     <% end %>
 
+  </div>
 </div>
 
   </header>
