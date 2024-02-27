@@ -1,11 +1,68 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <style>
+    .card-container {
+      
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .card-image img {
+      width: 100px;
+      height: auto;
+    }
+
+    .body {
+  margin: auto;
+  padding: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+  </style>
 </head>
+
 <body>
-  coucou
+  <header>
+
+  <nav>
+  <img alt="Logo" width="300" src="/assets/logo.png">
+  </nav>
+<div class="card-container">
+    <% @costumes.each do |costume| %>
+
+    <div class="card" >
+
+    <div class="card-image">
+    <%= image_tag costume.url %>
+    </div>
+
+     <div class="name">
+    <%= costume.name %>
+    </div>
+
+    <div class="type">
+      <%= costume.costume_type %>
+    </div>
+
+    </div>
+
+    <% end %>
+
+</div>
+
+  </header>
 </body>
 </html>
