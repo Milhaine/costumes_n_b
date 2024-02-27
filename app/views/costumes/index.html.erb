@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     .card-container {
-      
+
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 10px;
@@ -55,6 +55,9 @@
 
     <div class="type">
       <%= costume.costume_type %>
+    </div>
+    <div data-controller ="toggle" class="mt-5">
+     <button class="btn btn-outline-success">Louer cette beauté</button>
     </div>
 
     </div>
