@@ -3,33 +3,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .card-container {
-      
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 10px;
-    }
-
-    .card {
-      padding: 20px;
-      border: 1px solid #ccc;
-    }
-
-    .card-image img {
-      width: 100px;
-      height: auto;
-    }
-
-    .body {
-  margin: auto;
-  padding: auto;
-  font-family: 'Arial', sans-serif;
-}
-
-.header {
-  background-color: #333;
-  padding: 10px 0;
-}
 
   </style>
 </head>
@@ -37,7 +10,7 @@
 <body>
   <header>
 
-  <nav>
+  <nav class="navbar">
   <img alt="Logo" width="300" src="/assets/logo.png">
   </nav>
 <div class="card-container">
@@ -50,7 +23,7 @@
     </div>
 
      <div class="name">
-    <%= costume.name %>
+    <%= link_to costume.name, costume_path(costume) %>
     </div>
 
     <div class="type">
