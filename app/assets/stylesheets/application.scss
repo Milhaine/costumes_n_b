@@ -1,145 +1,50 @@
-// // Graphical variables
+// Graphical variables
 @import "config/fonts";
-// @import "config/colors";
-// @import "config/bootstrap_variables";
+@import "config/colors";
+@import "config/bootstrap_variables";
 
-// // External libraries
-// @import "bootstrap";
-// @import "font-awesome";
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
 
-// // Your CSS partials
-// @import "components/index";
-// @import "pages/index";
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
 
-// @import "components/navbar";
+@import "components/navbar";
 
-// .body {
-//   margin: 0;
-//   padding: 0;
-//   height: 100%;
-//   font-family: 'Arial', sans-serif;
-// }
-
-// .header {
-//   background-color: #333;
-//   padding: 10px 0;
-// }
-
-// .nav {
-//   text-align:center;
-// }
-
-// .card-container {
-
-
-//   width: 100%;
-//   height: 100%;
-
-// }
-
-// .card {
-//   width: 100%;
-//   height: 100%;
-//   padding: 20px;
-//   border: 1px solid #ccc;
-// }
-
-// .card-image img {
-//   width: 100px;
-//   height: auto;
-// }
-
-// .a {
-// text-decoration: none;
-// }
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-.fond {
-  background-color: aliceblue;
-
-}
-.navbar {
-  background-color: rgba(255, 0, 225, 0.752);
-  padding: 0px;
-  margin: 0px;
-  height: 200px;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 100px;
-height: auto;
-
-}
-
-.row{
-  display:flex;
-}
-
-.card{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-font-family: Rubik;
-height: 300px;
-width: 200px;
-border:solid;
-border-width: 1px;
-border-radius: 10px;
-text-align: center;
-margin: 10px;
-border-color: rgb(0, 255, 26);
-background-color: aliceblue;
-font-size: 10px;
-padding: 4px;
-
-
-}
-
-
-.card-image img{
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-}
-
-.footer-container{
-  background-color: rgba(255, 0, 225, 0.752);
-  height: 100px;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-}
-
-.col-4{
-}
-
-.btn{
-  font-size: 15px;
-  border:solid;
-  border-width: 1px;
-  border-color: blueviolet;
-  border-radius: 50px;
-  background-color: blueviolet;
- color: aliceblue;
-}
-
-.btn:hover{
-  background-color: aliceblue;
-}
-
-.liens{
-  text-decoration: none;
-  color: black;
-}
-
-.info{
- text-align: left;
-}
-
-body {
+.body {
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
 }
 
+.header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav {
+  text-align: center;
+}
+
+.card-container {
+
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.card-image img {
+  width: 100px;
+  height: auto;
+}

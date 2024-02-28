@@ -1,22 +1,25 @@
 <div class="container">
   <div class="row">
+
     <% @costumes.each do |costume| %>
-    <div class="col-4 carte">
+    <div class="col-4">
+
     <div class="card" >
-    <div class=interior>
+
     <div class="card-image">
     <%= image_tag costume.url %>
     </div>
-    <div class="info">
+
      <div class="name">
-    <%= link_to costume.name, costume_path(costume), class:"liens"  %>
+    <%= link_to costume.name, costume_path(costume) %>
     </div>
 
     <div class="type">
       <%= costume.costume_type %>
     </div>
     <div  class="btn btn-outline-success">
-     <%= link_to "Louer cette beauté", new_costume_rental_path(costume), class:"liens" %>
+     <%= link_to "Louer cette beauté", new_costume_rental_path(costume) %>
+
     </div>
 
     </div>

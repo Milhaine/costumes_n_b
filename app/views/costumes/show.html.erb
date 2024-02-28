@@ -1,10 +1,24 @@
-<div class="card" id="show">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+  <img alt="Logo" width="300" src="/assets/logo.png">
+  </nav>
+<div>
 <%= @costume.name %>
 <%= @user.pseudo %>
+<br>
 <%= image_tag @costume.url %>
 <%=%>
+</div>
 <div class="btn btn-outline-success">
 <%= link_to 'louer', new_costume_rental_path(@costume) %>
 </div>
-</div>
-</div>
+
+</body>
+</html>

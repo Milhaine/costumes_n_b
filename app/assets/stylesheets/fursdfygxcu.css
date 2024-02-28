@@ -1,0 +1,31 @@
+.body {
+  margin: auto;
+  padding: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav {
+  text-align: center;
+}
+
+.card-container {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.card-image img {
+  width: 100px;
+  height: auto;
+}
