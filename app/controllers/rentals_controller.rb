@@ -18,7 +18,13 @@ class RentalsController < ApplicationController
     end
   end
 
+  def index
+    @user = current_user
+    @rentals = Rental.where(user_id: @user.id)
+  end
+
   private
+
   def rental_params
     params.require(:rental).permit(:start_date, :end_date)
   end

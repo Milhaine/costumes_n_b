@@ -1,0 +1,6 @@
+<% @rentals.each do |rental| %>
+  <p>
+    Nom: <%= rental.costume.name %>
+    du : <%= rental.start_date %> au : <%= rental.end_date %>
+  </p>
+<% end %>

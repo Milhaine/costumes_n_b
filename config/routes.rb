@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   resources :costumes, only: %i[index show new create] do
     resources :rentals, only: %i[new create]
   end
+  resource :users do
+    resources :rentals, only: %i[index]
+  end
 end
