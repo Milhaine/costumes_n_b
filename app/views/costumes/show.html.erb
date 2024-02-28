@@ -11,8 +11,10 @@
   </nav>
 <div>
 <%= @costume.name %>
+<%= @user.pseudo %>
 <br>
 <%= image_tag @costume.url %>
+<%=%>
 </div>
 <div class="btn btn-outline-success">
 <%= link_to 'louer', new_costume_rental_path(@costume) %>
