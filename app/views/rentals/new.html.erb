@@ -1,21 +1,7 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>louer <%=@costume.name%></title>
-</head>git 
-<body>
-  <nav class="navbar">
-  <img alt="Logo" width="300" src="/assets/logo.png">
-  </nav>
   <%=simple_form_for [@costume, @rental], url: costume_rentals_path do |f| %>
 
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date, as: :date %>
   <%= f.button :submit %>
 <% end %>
-
-</body>
-</html>
