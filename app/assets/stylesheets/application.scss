@@ -55,6 +55,10 @@
   background-color: aliceblue;
 
 }
+
+.container {
+display: flex;
+}
 .navbar {
   background-color: rgba(255, 0, 225, 0.752);
   padding: 0px;
@@ -98,7 +102,7 @@ padding: 4px;
  }
 
  .row{
-  display:flex;
+
  }
 
  .card-image img{
@@ -135,4 +139,16 @@ body {
 
 .search_form{
   display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.height-medium{
+  height: 50px;
+}
+
+.height-small{
+  height: 25px;
 }
