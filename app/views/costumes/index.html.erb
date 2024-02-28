@@ -9,16 +9,17 @@
     <div class="card-image">
     <%= image_tag costume.url %>
     </div>
-
+    <div class="info">
      <div class="name">
-    <%= link_to costume.name, costume_path(costume) %>
+    <%= link_to costume.name, costume_path(costume), class:"liens"  %>
     </div>
 
     <div class="type">
       <%= costume.costume_type %>
     </div>
+    </div>
     <div  class="btn btn-outline-success">
-     <%= link_to "Louer cette beauté", new_costume_rental_path(costume) %>
+     <%= link_to "Louer cette beauté", new_costume_rental_path(costume), class:"liens"  %>
 
     </div>
 
