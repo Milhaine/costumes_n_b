@@ -6,9 +6,11 @@
   <title>Create new costume</title>
 </head>
 <body>
-  <%= simple_form_for(article) do |f| %>
+  <%= simple_form_for(@costume) do |f| %>
     <%= f.input :name %>
+    <%= f.input :costume_type %>
     <%= f.input :photo, as: :file %>
+    <%= f.submit %>
   <% end %>
 </body>
 </html>
