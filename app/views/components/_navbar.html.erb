@@ -3,6 +3,7 @@
     <%= link_to costumes_path do %>
     <%= image_tag "logo.png", alt: "Le Logo", class:"logo" %>
     <% end %>
+    <%= image_tag image_url('https://res.cloudinary.com/detoat4si/image/upload/v1709129378/xraayaplkfkcywnwanwx.png'), alt: "Le Logo", class:"logo" %>
   </div>
 
   <div class="search_form">
@@ -16,7 +17,7 @@
                             input_html: { type: :date,
                                           name: :starts_at,
                                           value: params.dig(:starts_at) } %>
-    <%= f.input :ends_at, label: "Fin le",
+    <%=f.input :ends_at, label: "Fin le",
                           input_html: { type: :date,
                                         name: :ends_at,
                                         value: params.dig(:ends_at) } %>
