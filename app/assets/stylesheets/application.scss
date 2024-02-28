@@ -72,12 +72,13 @@ height: auto;
 
 .btn{
   font-size: 15px;
+  color: aliceblue;
   border:solid;
   border-width: 1px;
   border-color: blueviolet;
   border-radius: 50px;
   background-color: blueviolet;
- color: aliceblue;}
+}
 
  .card{
   display: flex;
@@ -93,7 +94,7 @@ text-align: center;
 margin: 10px;
 border-color: rgb(0, 255, 26);
 background-color: aliceblue;
-font-size: 10px;
+font-size: 15px;
 padding: 4px;
  }
 
@@ -135,4 +136,5 @@ body {
 
 .search_form{
   display: flex;
+  justify-content: space-between;
 }
