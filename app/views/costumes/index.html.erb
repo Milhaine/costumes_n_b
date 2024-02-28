@@ -7,7 +7,9 @@
     <div class="card" >
 
     <div class="card-image">
+      <%= link_to costume_path(costume) do%>
     <%= image_tag costume.url %>
+    <% end%>
     </div>
     <div class="info">
      <div class="name">
@@ -25,6 +27,7 @@
 
     </div>
 
+    </div>
     </div>
     <% end %>
 
