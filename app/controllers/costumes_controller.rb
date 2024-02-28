@@ -8,6 +8,10 @@ class CostumesController < ApplicationController
     set_user
   end
 
+  def new
+    @costume = Costume.new
+  end
+
   private
 
   def set_costume
