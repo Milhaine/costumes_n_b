@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create new costume</title>
+</head>
+<body>
+  <%= simple_form_for(@costume) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :costume_type %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</body>
+</html>
