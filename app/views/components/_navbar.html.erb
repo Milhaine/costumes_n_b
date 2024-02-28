@@ -6,7 +6,7 @@
   </div>
 
   <div class="search_form">
-  <%= simple_form_for(costumes_path, method: :get) do |f| %>
+  <%= simple_form_for(costumes_path, method: :get, html:{class: "d-flex height-medium"}) do |f| %>
     <%= f.input :costume_type do %>
       <%= f.select :costume_type,
                   Costume.types,
@@ -20,7 +20,7 @@
                           input_html: { type: :date,
                                         name: :ends_at,
                                         value: params.dig(:ends_at) } %>
-    <%= submit_tag 'Rechercher' %>
+    <%= submit_tag 'Rechercher'%>
   <% end %>
   </div>
 
