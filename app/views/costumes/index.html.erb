@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="row">
     <% @costumes.each do |costume| %>
@@ -15,9 +14,6 @@
 
     <div class="type">
       <%= costume.costume_type %>
-      </div>
-      </div>
-      <%=%>
     </div>
     <div  class="btn btn-outline-success">
      <%= link_to "Louer cette beauté", new_costume_rental_path(costume), class:"liens" %>
