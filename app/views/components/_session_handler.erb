@@ -2,6 +2,7 @@
   <% if current_user %>
     <p>Welcome <%= current_user.email %></p>
     <p><%= link_to 'profile',  users_rentals_path %></p>
+    <p><%= link_to 'Mettre un costume en location',  new_costume_path %></p>
     <%= button_to 'logout', destroy_user_session_path, method: :delete %>
   <% else %>
     <%= link_to 'sign in', new_user_session_path %>
