@@ -5,9 +5,13 @@
     <div class="card" >
 
     <div class="card-image">
-      <%= link_to costume_path(costume) do%>
-    <%= image_tag costume.url %>
-    <% end%>
+      <%= link_to costume_path(costume) do %>
+        <% if  costume.url %>
+          <%= image_tag costume.url %>
+        <% else %>
+          <%= cl_image_tag costume.photo.key %>
+        <% end %>
+    <% end %>
     </div>
     <div class="info">
      <div class="name">

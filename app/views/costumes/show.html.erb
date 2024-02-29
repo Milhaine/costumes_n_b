@@ -2,8 +2,11 @@
 <%= @costume.name %>
 <%= @user.pseudo %>
 <br>
-<%= image_tag @costume.url %>
-<%=%>
+<% if  @costume.url %>
+  <%= image_tag @costume.url %>
+  <% else %>
+  <%= cl_image_tag @costume.photo.key %>
+<% end %>
 <div class="btn btn-outline-success">
 <%= link_to 'louer', new_costume_rental_path(@costume), class:"liens" %>
 </div>
