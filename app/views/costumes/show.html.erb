@@ -1,10 +1,12 @@
-<div class="card" id="show">
-  <h3>
-    <%= @costume.name %>
-  </h3>
-  <h4>
-    <%= @costume.costume_type %>
-  </h4>
+<div class="costume-show" id="show">
+  <div class="costume-show-header">
+    <h3>
+      <%= @costume.name %>
+    </h3>
+    <h4>
+      <%= @costume.costume_type %>
+    </h4>
+  </div>
   <%= @user.pseudo %>
   <br>
   <div class="costume-photo">
@@ -20,7 +22,7 @@
   </p>
   <br>
   <div class="btn btn-outline-success">
-    <%= link_to 'louer', new_costume_rental_path(@costume), class:"liens" %>
+    <%= link_to 'louer', new_costume_rental_path(@costume), class:"bouton" %>
   </div>
   <%= link_to 'Laisser un commentaire sur le costume', new_costume_review_path(@costume) %>
   <h5>
