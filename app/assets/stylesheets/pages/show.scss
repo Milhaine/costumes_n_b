@@ -1,0 +1,24 @@
+// *{
+//   border: red solid 1px;
+// }
+
+.produit{
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  align-self: center;
+  margin-bottom: 120px;
+  gap: 40px;
+  img{
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+}
+.commentaires{
+  a{
+    margin-bottom: 80px;
+  }
+}

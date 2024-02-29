@@ -1,34 +1,31 @@
-<div class="costume-show" id="show">
-  <div class="costume-show-header">
-    <h3>
-      <%= @costume.name %>
-    </h3>
-    <h4>
-      <%= @costume.costume_type %>
-    </h4>
-  </div>
-  <%= @user.pseudo %>
-  <br>
-  <div class="costume-photo">
+<%# Section produit %>
+<div class="produit">
+
+  <%# photo %>
     <% if  @costume.url %>
       <%= image_tag @costume.url %>
     <% else %>
       <%= cl_image_tag @costume.photo.key, height: 300, width: 400 %>
     <% end %>
-  </div>
-  <span>Prix : <%= @costume.price %></span>
-  <p>
-    <%= @costume.description %>
-  </p>
-  <br>
-  <div class="btn btn-outline-success">
+  <%# Content %>
+  <div class="Content">
+    <h1><%= @costume.name %></h1>
+    <p><%= @costume.costume_type %></p>
+    <p><%= @costume.description %></p>
+    <p><span>Prix : <%= @costume.price %></span></p>
     <%= link_to 'louer', new_costume_rental_path(@costume), class:"bouton" %>
+
   </div>
+
+</div>
+
+<%# Section produit %>
+
+<%# Commentaires %>
+
+<div class="commentaires">
   <%= link_to 'Laisser un commentaire sur le costume', new_costume_review_path(@costume) %>
-  <h5>
-    Commentaires des utilisateurs
-  </h5>
-  <% @costume.reviews.each do |review| %>
+    <% @costume.reviews.each do |review| %>
     <p>
       <%= review.content %>
     </p>

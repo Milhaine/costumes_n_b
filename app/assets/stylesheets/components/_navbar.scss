@@ -1,13 +1,31 @@
 .navbar {
   background-color: rgba(255, 0, 225, 0.489);
-  padding: 0px;
-  padding-top: 30px;
   height: 100px;
   display: flex;
   justify-content: space-between;
   font-family: Rubik;
+  margin-bottom: 120px;
+  .logo{
+    width: 400px;
+    height: 80px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
 .search_form{
-  display: flex;
+  width: fit-content;
 }
+
+.session-handler{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 400px;
+  justify-content: center;
+}
+
+
