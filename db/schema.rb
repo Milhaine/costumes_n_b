@@ -65,6 +65,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_101844) do
     t.index ["user_id"], name: "index_rentals_on_user_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.bigint "costume_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["costume_id"], name: "index_reviews_on_costume_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -81,4 +91,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_101844) do
   add_foreign_key "costumes", "users"
   add_foreign_key "rentals", "costumes"
   add_foreign_key "rentals", "users"
+  add_foreign_key "reviews", "costumes"
+  add_foreign_key "reviews", "users"
 end
