@@ -46,6 +46,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_tigre.png", content_type: "image/png")
 costume.save
+Review.create(content: "Franchement pas ouf", user_id: user2.id, costume_id: costume.id)
+Review.create(content: "ça sentait les pieds", user_id: user3.id, costume_id: costume.id)
 puts costume
 costumes_number = 1
 puts 'costume created'
@@ -60,6 +62,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_élan.png", content_type: "image/png")
 costume.save
+Review.create(content: "Tout piné", user_id: user2.id, costume_id: costume.id)
+Review.create(content: "J'ai trop transpiré", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -74,6 +78,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_lombric.png", content_type: "image/png")
 costume.save
+Review.create(content: "Je suis tombé dans les escaliers", user_id: user2.id, costume_id: costume.id)
+Review.create(content: "Heidi Klum a trop kiffé", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -88,6 +94,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_aigle.png", content_type: "image/png")
 costume.save
+Review.create(content: "J'ai pas réussi à pécho avec", user_id: user2.id, costume_id: costume.id)
+Review.create(content: "Moi non plus fréro", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -102,6 +110,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_doigt.png", content_type: "image/png")
 costume.save
+Review.create(content: "Le site de l'enfer", user_id: user2.id, costume_id: costume.id)
+Review.create(content: "JJPOW :(", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -116,6 +126,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_chat.png", content_type: "image/png")
 costume.save
+Review.create(content: "ça gratte à mort", user_id: user2.id, costume_id: costume.id)
+Review.create(content: "trop petit", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -130,6 +142,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_sushi.png", content_type: "image/png")
 costume.save
+Review.create(content: "Trop nuls les jeux de mots ici", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "Jeux de mots, finito pipo", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -144,6 +158,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_tong.png", content_type: "image/png")
 costume.save
+Review.create(content: "faut pas se laisser marcher sur les pieds", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "Je viendrai plus ici", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -158,6 +174,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_serpilliere.png", content_type: "image/png")
 costume.save
+Review.create(content: "faudrait un livre d'or", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "J'aurais mon mot à dire au designer", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -172,6 +190,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_poulet.png", content_type: "image/png")
 costume.save
+Review.create(content: "Faut arrêter là, sérieux", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "Moi non plus jppow !!", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -186,6 +206,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_phallus.png", content_type: "image/png")
 costume.save
+Review.create(content: "On est bientôt à la fin", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "trop gros pour mon copain", user_id: user2.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -200,6 +222,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_pied.png", content_type: "image/png")
 costume.save
+Review.create(content: "Vous connaissez le jeu FishU, trop de la grosse balle", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "Ouais on m'a dit que les devs avaient fait ce site de ouf aussi", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -214,6 +238,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_caca.png", content_type: "image/png")
 costume.save
+Review.create(content: "cool, cool, cool", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "que des numéros 10 dans ma teeeeam", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
@@ -228,6 +254,8 @@ costume = Costume.new(
 )
 costume.photo.attach(io: file, filename: "costume_.png", content_type: "image/png")
 costume.save
+Review.create(content: "Ici c'est Metz", user_id: user1.id, costume_id: costume.id)
+Review.create(content: "Du lourd", user_id: user3.id, costume_id: costume.id)
 puts costume
 puts 'costume created'
 costumes_number += 1
