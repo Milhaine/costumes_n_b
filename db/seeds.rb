@@ -111,3 +111,5 @@ description: "Le costume dans lequel t'as fière allure",
 user_id: 1)
 costume.photo.attach(io: file, filename: "costume_.png", content_type: "image/png")
 costume.save
+
+puts "c'est bon"

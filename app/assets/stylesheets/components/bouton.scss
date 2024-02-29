@@ -1,0 +1,17 @@
+.bouton{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: blueviolet;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: Rubik;
+}
+
+.bouton:hover{
+  background-color: aliceblue;
+  color: black;
+  border-radius: 20px;
+  padding: 10px;
+  border-color: blueviolet;
+  border-width: 2px;
+}
