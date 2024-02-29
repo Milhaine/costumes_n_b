@@ -7,21 +7,28 @@ puts "Cleaning the db"
 Rental.destroy_all
 puts 'removed rentals'
 
+Review.destroy_all
+puts "destroyed reviews"
+
 User.destroy_all
 puts 'users destroyed'
 
 Costume.destroy_all
 puts 'costume destroyed'
 
+
 puts "Initializing users"
 
-User.create(email: "roro@lewagon.com", password: "123456")
+user1 = User.new(email: "roro@lewagon.com", password: "123456")
+user1.save
 users = 1
 puts 'user created'
-User.create(email: "mymy@lewagon.com", password: "123456")
+user2 = User.new(email: "mymy@lewagon.com", password: "123456")
+user2.save
 puts 'user created'
 users += 1
-User.create(email: "cloclo@lewagon.com", password: "123456")
+user3 = User.new(email: "cloclo@lewagon.com", password: "123456")
+user3.save
 puts 'user created'
 users += 1
 
@@ -34,11 +41,12 @@ costume = Costume.new(
   name: "Costume de tigre",
   costume_type: "Mammifère",
   description: "Le costume qui va te faire rugir de plaisir",
-  user_id: 1,
+  user_id: user1.id,
   price: 15
 )
 costume.photo.attach(io: file, filename: "costume_tigre.png", content_type: "image/png")
 costume.save
+puts costume
 costumes_number = 1
 puts 'costume created'
 
@@ -47,11 +55,12 @@ costume = Costume.new(
   name: "Costume d'élan",
   costume_type: "Mammifère",
   description: "Le costume qui va te pousser en avant",
-  user_id: 1,
+  user_id: user1.id,
   price: 22.5
 )
 costume.photo.attach(io: file, filename: "costume_élan.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -60,11 +69,12 @@ costume = Costume.new(
   name: "Costume de lombric",
   costume_type: "Lombric",
   description: "Le costume qui glisse tout seul",
-  user_id: 1,
+  user_id: user1.id,
   price: 86
 )
 costume.photo.attach(io: file, filename: "costume_lombric.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -73,11 +83,12 @@ costume = Costume.new(
   name: "costume d'aigle",
   costume_type: "Rapace",
   description: "Le costume avec lequel tu t'envoles",
-  user_id: 1,
+  user_id: user1.id,
   price: 46
 )
 costume.photo.attach(io: file, filename: "costume_aigle.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -86,11 +97,12 @@ costume = Costume.new(
   name: "Costume doigt d'honeur",
   costume_type: "Membre",
   description: "Le costume pour dire fuck à la vie",
-  user_id: 2,
+  user_id: user1.id,
   price: 3
 )
 costume.photo.attach(io: file, filename: "costume_doigt.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -99,11 +111,12 @@ costume = Costume.new(
   name: "Costume de chat",
   costume_type: "Mammifère",
   description: "Le costume qui va en faire miauler plus d'un",
-  user_id: 2,
+  user_id: user1.id,
   price: 47
 )
 costume.photo.attach(io: file, filename: "costume_chat.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -112,11 +125,12 @@ costume = Costume.new(
   name: "Costume de sushi",
   costume_type: "Nourriture",
   description: "Le costume dans lequel t'as plus aucun sushi",
-  user_id: 2,
+  user_id: user2.id,
   price: 999
 )
 costume.photo.attach(io: file, filename: "costume_sushi.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -125,11 +139,12 @@ costume = Costume.new(
   name: "Costume de tong",
   costume_type: "Accessoire",
   description: "Le costume qui te fera te sentir droit dans tes bottes",
-  user_id: 2,
+  user_id: user2.id,
   price: 5
 )
 costume.photo.attach(io: file, filename: "costume_tong.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -138,11 +153,12 @@ costume = Costume.new(
   name: "Costume de serpillière",
   costume_type: "Accessoire",
   description: "Le costume qui te lave de tous tes péchés",
-  user_id: 2,
+  user_id: user2.id,
   price: 156
 )
 costume.photo.attach(io: file, filename: "costume_serpilliere.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -151,11 +167,12 @@ costume = Costume.new(
   name: "Costume de poulet",
   costume_type: "Nourriture",
   description: "Le costume que tu fourres de bonne humeur",
-  user_id: 3,
+  user_id: user2.id,
   price: 752
 )
 costume.photo.attach(io: file, filename: "costume_poulet.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -164,11 +181,12 @@ costume = Costume.new(
   name: "Costume de phallus",
   costume_type: "Membre",
   description: "Le costume qui te mets la trick #bite",
-  user_id: 3,
+  user_id: user3.id,
   price: 666
 )
 costume.photo.attach(io: file, filename: "costume_phallus.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -177,11 +195,12 @@ costume = Costume.new(
   name: "Costume de pied",
   costume_type: "Membre",
   description: "Le costume qui te fait prendre ton pied",
-  user_id: 3,
+  user_id: user3.id,
   price: 124
 )
 costume.photo.attach(io: file, filename: "costume_pied.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -190,11 +209,12 @@ costume = Costume.new(
   name: "Costume de caca",
   costume_type: "Membre",
   description: "Le costume qui pue la merde",
-  user_id: 3,
+  user_id: user3.id,
   price: -1
 )
 costume.photo.attach(io: file, filename: "costume_caca.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 
@@ -203,13 +223,13 @@ costume = Costume.new(
   name: "Costume de radar",
   costume_type: "Autre",
   description: "Le costume dans lequel t'as fière allure",
-  user_id: 3,
+  user_id: user3.id,
   price: 152
 )
 costume.photo.attach(io: file, filename: "costume_.png", content_type: "image/png")
 costume.save
+puts costume
 puts 'costume created'
 costumes_number += 1
 puts "initialized #{costumes_number} costumes"
 puts "Initializing reviews"
-
