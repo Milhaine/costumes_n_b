@@ -7,6 +7,7 @@
         <% end %>
       </div>
 
+<<<<<<< HEAD
       <div class="info">
         <div class="name">
           <%= link_to costume.name, costume_path(costume), class:"liens"  %>
@@ -15,6 +16,21 @@
           <%= costume.costume_type %>
         </div>
       </div>
+=======
+    <div class="card-image">
+      <%= link_to costume_path(costume) do %>
+        <% if  costume.url %>
+          <%= image_tag costume.url %>
+        <% else %>
+          <%= cl_image_tag costume.photo.key %>
+        <% end %>
+    <% end %>
+    </div>
+    <div class="info">
+     <div class="name">
+    <%= link_to costume.name, costume_path(costume), class:"liens"  %>
+    </div>
+>>>>>>> 578a61979c0889f9801a9217cd4e789596ba5fc1
 
       <div  class="btn btn-outline-success">
         <%= link_to "Louer cette beauté", new_costume_rental_path(costume), class:"liens"  %>
