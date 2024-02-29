@@ -43,3 +43,4 @@ Costume.create([
     }
   ]
 )
+puts "created"
