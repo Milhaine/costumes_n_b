@@ -1,8 +1,4 @@
 class ReviewsController < ApplicationController
-  def index
-    @reviews = Review.all
-  end
-
   def new
     @costume = Costume.find(params[:costume_id])
     @review = Review.new
