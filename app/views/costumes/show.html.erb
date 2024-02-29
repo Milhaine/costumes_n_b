@@ -1,13 +1,25 @@
 <div class="card" id="show">
-<%= @costume.name %>
-<%= @user.pseudo %>
-<br>
-<% if  @costume.url %>
-  <%= image_tag @costume.url %>
-  <% else %>
-  <%= cl_image_tag @costume.photo.key %>
-<% end %>
-<div class="btn btn-outline-success">
-<%= link_to 'louer', new_costume_rental_path(@costume), class:"liens" %>
-</div>
+  <h3>
+    <%= @costume.name %>
+  </h3>
+  <h4>
+    <%= @costume.costume_type %>
+  </h4>
+  <%= @user.pseudo %>
+  <br>
+  <div class="costume-photo">
+    <% if  @costume.url %>
+      <%= image_tag @costume.url %>
+    <% else %>
+      <%= cl_image_tag @costume.photo.key, height: 300, width: 400 %>
+    <% end %>
+  </div>
+  <span>Prix : <%= @costume.price %></span>
+  <p>
+    <%= @costume.description %>
+  </p>
+  <br>
+  <div class="btn btn-outline-success">
+    <%= link_to 'louer', new_costume_rental_path(@costume), class:"liens" %>
+  </div>
 </div>
