@@ -14,6 +14,7 @@ class RentalsController < ApplicationController
     if @rental.save
       redirect_to costume_path(@costume)
     else
+      flash[:alert] = @rental.errors.full_messages.to_sentence
       render :new, status: :unprocessable_entity
     end
   end
@@ -28,4 +29,5 @@ class RentalsController < ApplicationController
   def rental_params
     params.require(:rental).permit(:start_date, :end_date)
   end
+
 end
