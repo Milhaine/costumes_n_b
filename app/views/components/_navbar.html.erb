@@ -6,13 +6,9 @@
   </div>
 
   <div class="search_form">
- <%= form_with url: costumes_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Type a keyword"
-            %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <%= form_tag(costumes_path, method: :get) do %>
+    <%= text_field_tag :query, params[:query], placeholder: "Quelle beauté cherches tu?" %>
+    <%= submit_tag "Rechercher" %>
     <% end %>
   </div>
 

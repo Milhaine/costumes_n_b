@@ -1,10 +1,12 @@
 class Costume < ApplicationRecord
-  # def self.types
-  #   ["mammifère", "lombric", "rapace", "reptile", "insecte"]
-  # end
-
   belongs_to :user
   validates :name, presence: true, length: { minimum: 6 }
-  # validates :costume_type, inclusion: Costume.types
   has_one_attached :photo
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_costume_type,
+  against: [ :name, :costume_type ],
+  using: {
+    tsearch: { prefix: true }
+  }
 end
