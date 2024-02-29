@@ -1,17 +1,22 @@
-// // Graphical variables
-// @import "config/fonts";
-// @import "config/colors";
-// @import "config/bootstrap_variables";
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
 
-// // External libraries
-// @import "bootstrap";
-// @import "font-awesome";
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
 
-// // Your CSS partials
-// @import "components/index";
-// @import "pages/index";
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
 
-// @import "components/navbar";
+@import "components/navbar";
+@import "components/logo";
+@import "components/bouton";
+@import "components/liens";
+@import "components/card";
+
 
 // .body {
 //   margin: 0;
@@ -53,83 +58,6 @@
 
 .fond {
   background-color: aliceblue;
-
-}
-
-.container {
-display: flex;
-}
-.navbar {
-  background-color: rgba(255, 0, 225, 0.752);
-  padding: 0px;
-  padding-top: 30px;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  font-family: Rubik;
-}
-
-.logo {
-  width: 100px;
-height: auto;
-}
-
-.btn{
-  font-size: 15px;
-  border:solid;
-  border-width: 1px;
-  border-color: blueviolet;
-  border-radius: 50px;
-  background-color: blueviolet;
- color: aliceblue;}
-
- .card{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-font-family: Rubik;
-height: 300px;
-width: 200px;
-border:solid;
-border-width: 1px;
-border-radius: 10px;
-text-align: center;
-margin: 10px;
-border-color: rgb(0, 255, 26);
-background-color: aliceblue;
-font-size: 10px;
-padding: 4px;
- }
-
- .row{
-
- }
-
- .card-image img{
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-}
-
-.footer-container{
-  background-color: rgba(255, 0, 225, 0.752);
-  height: 100px;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-}
-
-.btn:hover{
-  background-color: aliceblue;}
-
-.liens{
-  text-decoration: none;
-  color: black;
-}
-
-.info{
- text-align: left;
 }
 
 body {
@@ -137,18 +65,20 @@ body {
   height: 100vh;
 }
 
-.search_form{
-  display: flex;
-}
-
 .d-flex {
   display: flex;
 }
 
-.height-medium{
-  height: 50px;
+.footer-container{
+  background-color: rgba(255, 0, 225, 0.752);
+  height: 100px;
 }
 
-.height-small{
-  height: 25px;
-}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  padding: 20px;
+  justify-content: center;
+  }

@@ -1,12 +1,13 @@
 .navbar {
+  background-color: rgba(255, 0, 225, 0.489);
+  padding: 0px;
+  padding-top: 30px;
+  height: 100px;
+  display: flex;
   justify-content: space-between;
-  background: rgb(99, 23, 23);
+  font-family: Rubik;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.search_form{
+  display: flex;
 }
