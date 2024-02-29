@@ -5,7 +5,7 @@ class Costume < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_name_and_costume_type,
-  against: [ :name, :costume_type ],
+  against: [ :name, :costume_type, :price, :description ],
   using: {
     tsearch: { prefix: true }
   }
