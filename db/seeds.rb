@@ -1,29 +1,11 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
-
-#     {
-#       name: "costume de tigre",
-#       costume_type: "mammifère",
-#       url: "https://www.lukylud.fr/wp-content/uploads/2020/11/mascotte-tigre-blanc.png",
-#       user_id: 1
-
-
 require "open-uri"
 
-file = URI.open("https://i.mmo.cm/is/image/mmoimg/mw-product-max/elan-mascotte--mw-102202-1.jpg")
+file = URI.open("https://www.lukylud.fr/wp-content/uploads/2020/11/mascotte-tigre-blanc.png")
 costume = Costume.new(name: "Costume de tigre",
 costume_type: "Mammifère",
-description: "Le costume qui va te pousser en avant",
+description: "Le costume qui va te faire rugir de plaisir",
 user_id: 1)
-costume.photo.attach(io: file, filename: "costume_élan.png", content_type: "image/png")
+costume.photo.attach(io: file, filename: "costume_tigre.png", content_type: "image/png")
 costume.save
 
 file = URI.open("https://i.mmo.cm/is/image/mmoimg/mw-product-max/elan-mascotte--mw-102202-1.jpg")
@@ -64,4 +46,68 @@ costume_type: "Mammifère",
 description: "Le costume qui va en faire miauler plus d'un",
 user_id: 1)
 costume.photo.attach(io: file, filename: "costume_chat.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://static1.disfrazzes.com/productos/disfraz-de-roll-de-sushi-para-hombre-159818.jpg")
+costume = Costume.new(name: "Costume de sushi",
+costume_type: "Nourriture",
+description: "Le costume dans lequel t'as plus aucun sushi",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_sushi.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://i.pinimg.com/564x/e2/9e/d9/e29ed93051fd1afbddffa21f1a06ab18.jpg")
+costume = Costume.new(name: "Costume de tong",
+costume_type: "Accessoire",
+description: "Le costume qui te fera te sentir droit dans tes bottes",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_tong.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://www.happyfete.com/images/tres-grand/d/r/d/Deguisement-rigolo-de-serpilliere-pour-adulte.jpg")
+costume = Costume.new(name: "Costume de serpillière",
+costume_type: "Accessoire",
+description: "Le costume qui te lave de tous tes péchés",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_serpilliere.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://mocheattitude.com/cdn/shop/files/S880bed5cb9e3456988747fdf5f9ef19eZ.webp?v=1700557813&width=990")
+costume = Costume.new(name: "Costume de poulet",
+costume_type: "Nourriture",
+description: "Le costume que tu fourres de bonne humeur",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_poulet.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://www.lamagiedudeguisement.fr/159-large_default/deguisement-zizi-adulte-fa013s0.jpg")
+costume = Costume.new(name: "Costume de phallus",
+costume_type: "Membre",
+description: "Le costume qui te mets la trick #bite",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_phallus.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://beauf-attitude.com/cdn/shop/products/CostumeLaid_1_1024x.jpg?v=1696795031")
+costume = Costume.new(name: "Costume de pied",
+costume_type: "Membre",
+description: "Le costume qui te fait prendre ton pied",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_pied.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://justbebeauf.com/cdn/shop/products/Sdabc36a9eedd47bfb4c7ea0252b025d2Q.jpg?v=1669750774&width=1000")
+costume = Costume.new(name: "Costume de caca",
+costume_type: "Membre",
+description: "Le costume qui pue la merde",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_caca.png", content_type: "image/png")
+costume.save
+
+file = URI.open("https://static.kiabi.com/images/deguisement-radar-blanc-bqw36_1_frb1.jpg")
+costume = Costume.new(name: "Costume de radar",
+costume_type: "Autre",
+description: "Le costume dans lequel t'as fière allure",
+user_id: 1)
+costume.photo.attach(io: file, filename: "costume_.png", content_type: "image/png")
 costume.save
