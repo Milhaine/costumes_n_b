@@ -22,4 +22,12 @@
   <div class="btn btn-outline-success">
     <%= link_to 'louer', new_costume_rental_path(@costume), class:"liens" %>
   </div>
+  <h5>
+    Commentaires des utilisateurs
+  </h5>
+  <% @costume.reviews.each do |review| %>
+    <p>
+      <%= review.content %>
+    </p>
+  <% end %>
 </div>
