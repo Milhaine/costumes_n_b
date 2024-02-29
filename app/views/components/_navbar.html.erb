@@ -6,22 +6,14 @@
   </div>
 
   <div class="search_form">
-  <%= simple_form_for(costumes_path, method: :get, html:{class: "d-flex height-medium"}) do |f| %>
-    <%= f.input :costume_type do %>
-      <%= f.select :costume_type,
-                  Costume.types,
-                  selected: @selected_costume_type %>
+ <%= form_with url: costumes_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a keyword"
+            %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
     <% end %>
-    <%= f.input :starts_at, label: "Début le",
-                            input_html: { type: :date,
-                                          name: :starts_at,
-                                          value: params.dig(:starts_at) } %>
-    <%=f.input :ends_at, label: "Fin le",
-                          input_html: { type: :date,
-                                        name: :ends_at,
-                                        value: params.dig(:ends_at) } %>
-    <%= submit_tag 'Rechercher'%>
-  <% end %>
   </div>
 
   <%= render 'components/session_handler' %>

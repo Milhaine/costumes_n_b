@@ -1,9 +1,16 @@
 class CostumesController < ApplicationController
   before_action :set_costume, only: %i[show]
   def index
-    @selected_costume_type = params["/costumes"]["costume_type"] if params["/costumes"].present?
+    # @selected_costume_type = params["/costumes"]["costume_type"] if params["/costumes"].present?
     @costumes = Costume.all
-    @costumes = @costumes.where(costume_type: params["/costumes"]["costume_type"]) if params["/costumes"] && params["/costumes"]["costume_type"].present?
+    if params[:query].present?
+      sql_subquery = <<~SQL
+      costumes.name ILIKE :query
+      OR costumes.costume_type ILIKE :query
+    SQL
+    @costumes = @costumes.where(sql_subquery, query: "%#{params[:query]}%")
+    end
+    # @costumes = @costumes.where(costume_type: params["/costumes"]["costume_type"]) if params["/costumes"] && params["/costumes"]["costume_type"].present?
   end
 
   def show
