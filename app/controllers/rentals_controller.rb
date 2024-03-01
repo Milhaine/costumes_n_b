@@ -12,6 +12,7 @@ class RentalsController < ApplicationController
     @rental.costume = @costume
     @rental.user = @user
     if @rental.save
+      flash[:notice] = "Y'en a un qui va passer une bonne soirée dis donc 🥳"
       redirect_to costume_path(@costume)
     else
       flash[:alert] = @rental.errors.full_messages.to_sentence
