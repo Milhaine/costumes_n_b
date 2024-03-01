@@ -1,9 +1,9 @@
 
   <%= simple_form_for(@costume) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :costume_type %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :name, label: 'Nom du costume' %>
+    <%= f.input :costume_type, label: 'Type de costume' %>
+    <%= f.input :description, label: 'Description, soyez original !!' %>
+    <%= f.input :price, label: 'Prix, pas trop cher non plus ;)' %>
+    <%= f.input :photo, as: :file, label: 'Photo' %>
     <%= f.submit 'Mettre en ligne', class:'bouton' %>
   <% end %>
