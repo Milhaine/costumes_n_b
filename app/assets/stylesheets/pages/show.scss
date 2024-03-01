@@ -18,11 +18,15 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 }
-.commentaires{
-  margin-top: 80px;
+.comms{
+  margin-top: 30px;
+  .com{
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
   a{
     margin-bottom: 80px;
-  }
-  .com{
   }
 }
