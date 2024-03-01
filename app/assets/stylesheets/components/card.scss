@@ -6,14 +6,15 @@ font-family: Rubik;
 height: 300px;
 width: 200px;
 border:solid;
-border-width: 1px;
+border-width: 2px;
 border-radius: 10px;
 text-align: center;
 margin: 10px;
-border-color: rgb(0, 255, 26);
+border-color: rgb(255, 255, 255);
+box-shadow: 0 0px 20px rgba(104, 255, 117, 0.7);
 background-color: aliceblue;
 font-size: 10px;
-padding: 4px;
+padding: 15px;
  }
 
  .info{
