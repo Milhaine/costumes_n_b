@@ -7,8 +7,8 @@
       <p>Une phrase d'accroche qui déchire</p>
       <div class="search_form">
         <%= form_tag(costumes_path, method: :get) do %>
-        <%= text_field_tag :query, params[:query], placeholder: "Quelle beauté cherches tu?" %>
-        <%= submit_tag "Rechercher" %>
+        <%= text_field_tag :query, params[:query], placeholder: "Rechercher" %>
+        <%= submit_tag "Rechercher", class:"bouton" %>
         <% end %>
       </div>
     </div>

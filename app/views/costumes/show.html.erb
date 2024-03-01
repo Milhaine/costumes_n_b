@@ -14,7 +14,17 @@
     <p><%= @costume.description %></p>
     <p><span>Prix : <%= @costume.price %></span></p>
     <%= link_to 'louer', new_costume_rental_path(@costume), class:"bouton" %>
-
+    <div class="commentaires">
+        <p><strong>Commentaires:</strong></p>
+        <% @costume.reviews.each do |review| %>
+        <div class="com">
+          <p>
+            <%= review.content %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to 'Laisser un commentaire sur le costume', new_costume_review_path(@costume) %>
   </div>
 
 </div>
@@ -22,12 +32,3 @@
 <%# Section produit %>
 
 <%# Commentaires %>
-
-<div class="commentaires">
-  <%= link_to 'Laisser un commentaire sur le costume', new_costume_review_path(@costume) %>
-    <% @costume.reviews.each do |review| %>
-    <p>
-      <%= review.content %>
-    </p>
-  <% end %>
-</div>
