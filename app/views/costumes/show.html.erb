@@ -18,10 +18,14 @@
         <p><strong>Commentaires:</strong></p>
         <% @costume.reviews.each do |review| %>
         <div class="com">
-          <p><em><%= review.user.email %></em></p>
-          <p>
-            "<%= review.content %>"
-          </p>
+          <div class="email">
+            <p><em><%= review.user.email %></em></p>
+          </div>
+          <div class="content">
+            <p>
+              "<%= review.content %>"
+            </p>
+          </div>
         </div>
       <% end %>
     </div>

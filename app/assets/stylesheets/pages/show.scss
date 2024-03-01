@@ -21,9 +21,17 @@
 .comms{
   margin-top: 30px;
   .com{
-    border: 1px solid black;
-    margin-top: 10px;
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 5px;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    .email{
+      font-size: 10px;
+      text-align: right;
+    }
   }
 
   a{
