@@ -1,10 +1,8 @@
-<h2>Vos locations</h2>
-
-<div class="rental">
-  <div>
+<div class="rentals-costumes">
+  <div class="card-rental">
     <h3>Vous avez déjà loué</h3>
     <% @rentals.each do |rental| %>
-    <div class="card-rental">
+    <div class="card">
       <div class="pic">
         <%= cl_image_tag rental.costume.photo.key, height: 50, width: 50  %>
       </div>
@@ -19,7 +17,7 @@
     </div>
     <% end %>
   </div>
-  <div>
+  <div  class="card-rental">
     <h3>Vos cotumes disponibles à la location</h3>
     <% @user.costumes.each do |costume| %>
     <div class="card">
