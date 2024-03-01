@@ -18,13 +18,14 @@
         <p><strong>Commentaires:</strong></p>
         <% @costume.reviews.each do |review| %>
         <div class="com">
+          <p><em><%= review.user.email %></em></p>
           <p>
-            <%= review.content %>
+            "<%= review.content %>"
           </p>
         </div>
       <% end %>
     </div>
-    <%= link_to 'Laisser un commentaire sur le costume', new_costume_review_path(@costume) %>
+    <%= link_to 'Laisser un commentaire', new_costume_review_path(@costume), class:"bouton" %>
   </div>
 
 </div>
