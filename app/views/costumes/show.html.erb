@@ -15,7 +15,7 @@
     <p><span>Prix : <%= @costume.price %></span></p>
     <%= link_to 'louer', new_costume_rental_path(@costume), class:"bouton" %>
     <div class="comms">
-        <p><strong>Commentaires:</strong></p>
+        <p><strong>Commentaires</strong></p>
         <% @costume.reviews.each do |review| %>
         <div class="com">
           <div class="email">
