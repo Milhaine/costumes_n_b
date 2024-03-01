@@ -1,24 +1,31 @@
 .card{
 display: flex;
 flex-direction: column;
-justify-content: space-between;
 font-family: Rubik;
-height: 300px;
+height: fit-content;
 width: 200px;
 border:solid;
-border-width: 2px;
-border-radius: 10px;
+border-width: 1px;
+border-radius: 8px;
 text-align: center;
 margin: 10px;
 border-color: rgb(255, 255, 255);
 box-shadow: 0 0px 20px rgba(104, 255, 117, 0.7);
 background-color: aliceblue;
-font-size: 10px;
-padding: 15px;
+
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+overflow: hidden;
+  .type{
+    margin-bottom: 12px;
+  }
  }
 
  .info{
   text-align: left;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
  }
 
  .lien {
@@ -29,6 +36,6 @@ padding: 15px;
 
   .card-image img{
     height: 200px;
-    width: 200px;
+    width: 100%;
     object-fit: cover;
   }

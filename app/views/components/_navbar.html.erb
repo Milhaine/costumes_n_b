@@ -5,12 +5,5 @@
     <% end %>
   </div>
 
-  <div class="search_form">
-    <%= form_tag(costumes_path, method: :get) do %>
-    <%= text_field_tag :query, params[:query], placeholder: "Quelle beauté cherches tu?" %>
-    <%= submit_tag "Rechercher" %>
-    <% end %>
-  </div>
-
   <%= render 'components/session_handler' %>
 </nav>

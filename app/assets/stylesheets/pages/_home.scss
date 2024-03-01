@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+.banner{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 120px;
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .layout{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+    height: 100%;
+    .empty{
+      width: 170px;
+      height: 80px;
+      background-color: #ffecd1;
+      align-self: flex-end;
+    }
+  }
+}
