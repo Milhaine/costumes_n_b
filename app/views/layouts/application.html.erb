@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CostumesNB</title>
+<head>
+  <title>lowcost.um</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="custom-cursor-enabled">
 
-  <body>
     <%= render "components/navbar" %>
     <% flash.each do |type, msg| %>
       <div>
@@ -20,6 +23,5 @@
     <%= yield %>
     <footer class="footer-container">
     </footer>
-  </body>
-
+</body>
 </html>
