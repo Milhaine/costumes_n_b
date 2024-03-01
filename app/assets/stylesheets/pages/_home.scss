@@ -5,6 +5,11 @@
   height: 600px;
   overflow: hidden;
   margin-bottom: 120px;
+  }
+  #query{
+    height: 40px;
+  }
+
   iframe{
     position: absolute;
     top: 0;
@@ -20,6 +25,24 @@
     z-index: 1;
     flex-direction: column;
     height: 100%;
+    .content{
+      color: $Lime9;
+      background-color: rgba(0,0,0,0.2);
+      width: 100%;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      #query{
+        height: 40px;
+        padding: 8px 16px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+      }
+    }
     .empty{
       width: 170px;
       height: 80px;
@@ -27,4 +50,3 @@
       align-self: flex-end;
     }
   }
-}

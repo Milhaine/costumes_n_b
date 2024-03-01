@@ -1,10 +1,12 @@
 .navbar {
-  background-color: rgba(255, 0, 225, 0.489);
+  // background-color: rgba(255, 0, 225, 0.489);
+  background-color: #ffecd1;
   height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   font-family: Rubik;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   .logo{
     width: 400px;
     height: 80px;
@@ -21,9 +23,14 @@
 }
 
 .session-handler{
+
   display: flex;
   flex-direction: row;
   gap: 12px;
   width: 400px;
   justify-content: center;
+  a{
+    color:#621639;
+    font-weight: bold;
+  }
 }
