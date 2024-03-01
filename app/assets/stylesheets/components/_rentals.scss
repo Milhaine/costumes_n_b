@@ -1,0 +1,31 @@
+.rentals-costumes {
+  width: 800px;
+  padding: 10px;
+  justify-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.card-rental{
+  display: flex;
+  flex-direction: column;
+  font-family: Rubik;
+  height: fit-content;
+  width: 300px;
+  padding: 10px;
+  border:solid;
+  border-width: 1px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px;
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0 0px 20px rgba(104, 255, 117, 0.7);
+  background-color: aliceblue;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+    .type{
+      margin-bottom: 12px;
+    }
+   }

@@ -1,18 +1,31 @@
-<h2>Vos locations</h2>
-
-<h3>Vous avez déjà loué</h3>
-<% @rentals.each do |rental| %>
-  <p>
-    <%= cl_image_tag rental.costume.photo.key, height: 50, width: 50  %>
-    <%= link_to rental.costume.name, costume_path(rental.costume) %>
-    du : <%= rental.start_date %> au : <%= rental.end_date %>
-  </p>
-<% end %>
-
-<h3>Vos cotumes disponibles à la location</h3>
-<% @user.costumes.each do |costume| %>
-  <p>
-    <%= link_to costume.name, costume_path(costume) %>
-    <%= cl_image_tag costume.photo.key, height: 50, width: 50 %>
-  </p>
-<% end %>
+<div class="rentals-costumes">
+  <div class="card-rental">
+    <h3>Vous avez déjà loué</h3>
+    <% @rentals.each do |rental| %>
+    <div class="card">
+      <div class="pic">
+        <%= cl_image_tag rental.costume.photo.key, height: 50, width: 50  %>
+      </div>
+      <div class="rental-description">
+        <p>
+          <%= link_to rental.costume.name, costume_path(rental.costume) %>
+        </p>
+        <p>
+          du : <%= rental.start_date %> au : <%= rental.end_date %>
+        </p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div  class="card-rental">
+    <h3>Vos cotumes disponibles à la location</h3>
+    <% @user.costumes.each do |costume| %>
+    <div class="card">
+      <p>
+        <%= link_to costume.name, costume_path(costume) %>
+        <%= cl_image_tag costume.photo.key, height: 50, width: 50 %>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</div>
