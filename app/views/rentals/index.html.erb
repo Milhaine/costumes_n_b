@@ -1,6 +1,18 @@
+<h2>Vos locations</h2>
+
+<h3>Vous avez déjà loué</h3>
 <% @rentals.each do |rental| %>
   <p>
-    Nom: <%= rental.costume.name %>
+    <%= cl_image_tag rental.costume.photo.key, height: 50, width: 50  %>
+    <%= link_to rental.costume.name, costume_path(rental.costume) %>
     du : <%= rental.start_date %> au : <%= rental.end_date %>
+  </p>
+<% end %>
+
+<h3>Vos cotumes disponibles à la location</h3>
+<% @user.costumes.each do |costume| %>
+  <p>
+    <%= link_to costume.name, costume_path(costume) %>
+    <%= cl_image_tag costume.photo.key, height: 50, width: 50 %>
   </p>
 <% end %>
